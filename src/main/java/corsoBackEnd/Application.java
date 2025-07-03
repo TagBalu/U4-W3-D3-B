@@ -1,7 +1,7 @@
 package corsoBackEnd;
 
 import com.github.javafaker.Faker;
-import corsoBackEnd.entities.festaDelPaese;
+import corsoBackEnd.entities.evento;
 import corsoBackEnd.entities.tipoEvento;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -20,7 +20,7 @@ public class Application {
         EntityTransaction transaction = em.getTransaction();
         transaction.begin();
 
-        em.persist(new festaDelPaese("Sagra della polenta","Venite tutti alla festa", tipoEvento.PUBLICO,200));
+        em.persist(new evento("Sagra della polenta","Venite tutti alla festa", tipoEvento.PUBLICO,200));
 
         transaction.commit();
 

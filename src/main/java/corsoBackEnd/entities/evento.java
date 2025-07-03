@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "festa_del_paese")
-public class festaDelPaese {
+@Table(name = "evento")
+public class evento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,10 +24,10 @@ public class festaDelPaese {
     private int numeroMassimoPartecipanti;
 
 
-    public festaDelPaese() {}
+    public evento() {}
 
 
-    public festaDelPaese(String titolo, String descrizione, tipoEvento tipoEvento, int numeroMassimoPartecipanti) {
+    public evento(String titolo, String descrizione, tipoEvento tipoEvento, int numeroMassimoPartecipanti) {
         this.titolo = titolo;
         this.dataEvento = LocalDate.now();
         this.descrizione = descrizione;
